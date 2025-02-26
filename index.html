@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="Splitter Logo" />
+    </header>
+
+    <main>
+      <section class="bill-input">
+        <label for="bill">Bill</label>
+        <div class="input-container">
+          <img src="./images/icon-dollar.svg" />
+          <input type="number" id="bill" placeholder="0" step="0.01" />
+        </div>
+      </section>
+
+      <section class="tip-selection">
+        <fieldset>
+          <legend>Select Tip %</legend>
+          <div class="tip-container">
+            <div class="tip">
+              <input type="radio" name="tip" id="tip-5" value="5" />
+              <label for="tip-5">5%</label>
+            </div>
+            <div class="tip">
+              <input type="radio" name="tip" id="tip-10" value="10" />
+              <label for="tip-10">10%</label>
+            </div>
+            <div class="tip">
+              <input type="radio" name="tip" id="tip-15" value="15" />
+              <label for="tip-15">15%</label>
+            </div>
+            <div class="tip">
+              <input type="radio" name="tip" id="tip-25" value="25" />
+              <label for="tip-25">25%</label>
+            </div>
+            <div class="tip">
+              <input type="radio" name="tip" id="tip-50" value="50" />
+              <label for="tip-50">50%</label>
+            </div>
+            <div class="tip">
+              <input
+                type="number"
+                name="tip"
+                id="custom"
+                placeholder="Custom" />
+              <label for="custom">Custom</label>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="people-input">
+        <div class="label-error-container">
+          <label for="people">Number of People</label>
+          <span class="error-message" id="people-error">Can't be zero</span>
+        </div>
+        <div class="input-container">
+          <img src="./images/icon-person.svg" />
+          <input type="number" id="people" placeholder="0" />
+        </div>
+      </section>
+
+      <section class="results-container">
+        <div class="results">
+          <article class="tip-amount-container">
+            <div class="label">
+              <p>Tip Amount</p>
+              <span class="per-person">/ person</span>
+            </div>
+            <output name="tip-amount" class="amount" id="tip-amount-value"
+              >$0.00</output
+            >
+          </article>
+          <article class="total-amount-container">
+            <div class="label">
+              <p>Total</p>
+              <span class="per-person">/ person</span>
+            </div>
+            <output name="total-amount" class="amount" id="tip-amount-value"
+              >$0.00</output
+            >
+          </article>
+
+          <div class="reset-button">
+            <button type="reset">RESET</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.linkedin.com/in/muhammad-fachrezi-barus/"
+          >Fachrezi</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
