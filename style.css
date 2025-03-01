@@ -1,9 +1,230 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.attribution {
-  font-size: 11px;
+:root {
+  /* color */
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
+/* mobile: 375px - 720px */
+body {
+  background-color: var(--Light-grayish-cyan);
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+}
+
+label,
+legend {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--Dark-grayish-cyan);
+}
+
+main {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-wrapper {
+  background-color: var(--Very-light-grayish-cyan);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+}
+
+.input-wrapper img {
+  background-size: cover;
+  width: 20px;
+  height: 30px;
+}
+
+.input-field {
+  border: none;
+  text-align: right;
+  background-color: var(--Very-light-grayish-cyan);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--Very-dark-cyan);
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.input-field::placeholder {
+  color: var(--Grayish-cyan);
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.tip-option:not(#custom-tip) {
+  position: relative;
+  min-height: 50px;
+}
+
+.tip-button {
+  position: absolute;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0.2rem;
+  color: var(--White);
+  font-size: 1.2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.tip-option:has(input:checked) .tip-button {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+#custom-tip input {
+  border: none;
+  background-color: var(--Very-light-grayish-cyan);
+  height: 50px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--Very-dark-cyan);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+#custom-tip input:focus {
+  outline: 0.1rem solid var(--Strong-cyan);
+  text-align: right;
+}
+
+#custom-tip input::placeholder {
+  color: var(--Grayish-cyan);
+  font-size: 1.2rem;
+  font-weight: 600;
   text-align: center;
 }
-.attribution a {
+
+#custom-tip input:focus::placeholder {
+  color: transparent;
+}
+
+.result-section {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.result-labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-title {
+  color: var(--White);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.result-subtitle {
+  color: var(--Grayish-cyan);
+  font-size: 0.7rem;
+}
+
+.result-value {
+  color: var(--Strong-cyan);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.reset-button {
+  background-color: hsl(183, 98%, 21%);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+footer {
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+footer a {
   color: hsl(228, 45%, 44%);
 }
+
+/* tablet: 720px - 1280px */
+
+/* desktop: >1280px */
