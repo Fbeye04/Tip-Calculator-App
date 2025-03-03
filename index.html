@@ -89,6 +89,7 @@
               <input
                 type="number"
                 class="tip-custom"
+                id="custom"
                 placeholder="Custom"
                 aria-label="Enter custom tip percentage" />
             </div>
@@ -99,15 +100,11 @@
         <div class="input-group">
           <div class="input-header">
             <label for="people" class="input-label">Number of People</label>
-            <span
-              class="error-message"
-              id="people-error"
-              aria-live="polite"
-              hidden
+            <span class="error-message" id="people-error" aria-live="polite"
               >Can't be zero</span
             >
           </div>
-          <div class="input-wrapper">
+          <div class="input-wrapper" id="people-wrapper">
             <img src="./images/icon-person.svg" />
             <input
               type="number"
@@ -144,7 +141,9 @@
           </div>
         </div>
 
-        <button type="button" class="reset-button" disabled>RESET</button>
+        <button type="button" class="reset-button" id="reset-button" disabled>
+          RESET
+        </button>
       </section>
     </main>
 
