@@ -88,7 +88,6 @@ main {
 .input-field {
   border: none;
   text-align: right;
-  background-color: var(--Very-light-grayish-cyan);
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--Very-dark-cyan);
@@ -240,6 +239,7 @@ legend {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -308,4 +308,13 @@ footer a {
 
 /* desktop: >1280px */
 @media (width > 53.3rem) {
+  main {
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 40rem;
+  }
+
+  .tip-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
