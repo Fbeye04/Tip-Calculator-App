@@ -71,14 +71,6 @@ main {
   border-radius: 0.2rem;
 }
 
-.input-wrapper.success {
-  outline: 0.1rem solid var(--alert-success-border);
-}
-
-.input-wrapper.error {
-  outline: 0.1rem solid var(--alert-error-border);
-}
-
 .input-wrapper img {
   background-size: cover;
   width: 20px;
@@ -92,6 +84,7 @@ main {
   font-weight: 600;
   color: var(--Very-dark-cyan);
   width: 100%;
+  background-color: var(--Very-light-grayish-cyan);
 }
 
 input::-webkit-outer-spin-button,
@@ -192,11 +185,12 @@ legend {
   color: transparent;
 }
 
-#people-wrapper.success {
+/* error styling */
+.input-wrapper.success {
   outline: 0.1rem solid var(--alert-success-border);
 }
 
-#people-wrapper.error {
+.input-wrapper.error {
   outline: 0.1rem solid var(--alert-error-border);
 }
 
@@ -205,13 +199,13 @@ legend {
   justify-content: space-between;
 }
 
-#people-error {
+.error-message {
   color: red;
   text-align: right;
   display: none;
 }
 
-.input-group:has(.error) #people-error {
+.input-group:has(.error) .error-message {
   display: block;
   color: var(--alert-error-text);
 }

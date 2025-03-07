@@ -25,7 +25,10 @@
       <section class="input-section">
         <!-- Bill input -->
         <div class="input-group">
-          <label for="bill" class="input-label">Bill</label>
+          <div class="input-header">
+            <label for="bill" class="input-label">Bill</label>
+            <span class="error-message" aria-live="polite">Can't be zero</span>
+          </div>
           <div class="input-wrapper">
             <img src="./images/icon-dollar.svg" alt="dollar icon" />
             <input
@@ -101,11 +104,9 @@
         <div class="input-group">
           <div class="input-header">
             <label for="people" class="input-label">Number of People</label>
-            <span class="error-message" id="people-error" aria-live="polite"
-              >Can't be zero</span
-            >
+            <span class="error-message" aria-live="polite">Can't be zero</span>
           </div>
-          <div class="input-wrapper" id="people-wrapper">
+          <div class="input-wrapper">
             <img src="./images/icon-person.svg" alt="dollar icon" />
             <input
               type="number"
@@ -155,7 +156,9 @@
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by
-        <a href="https://www.linkedin.com/in/muhammad-fachrezi-barus/"
+        <a
+          href="https://www.linkedin.com/in/muhammad-fachrezi-barus/"
+          target="_blank"
           >Fachrezi</a
         >.
       </p>

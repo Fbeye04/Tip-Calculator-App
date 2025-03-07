@@ -35,13 +35,15 @@ function updateResetButton() {
 
 billValue.addEventListener("input", function () {
   const value = parseFloat(this.value) || 0;
+  const inputWrapper = this.parentElement;
 
   if (value > 0) {
-    this.parentElement.classList.add("success");
-    this.parentElement.classList.remove("error");
+    inputWrapper.classList.add("success");
+    inputWrapper.classList.remove("error");
     initialBill = value;
   } else {
-    this.parentElement.classList.remove("success");
+    inputWrapper.classList.remove("success");
+    inputWrapper.classList.add("error");
     initialBill = 0;
   }
 
@@ -51,13 +53,15 @@ billValue.addEventListener("input", function () {
 
 numberOfPerson.addEventListener("input", function () {
   const value = parseInt(this.value) || 0;
+  const inputWrapper = this.parentElement;
 
   if (value > 0) {
-    this.parentElement.classList.add("success");
-    this.parentElement.classList.remove("error");
+    inputWrapper.classList.add("success");
+    inputWrapper.classList.remove("error");
     initialPeople = value;
   } else {
-    this.parentElement.classList.remove("success");
+    inputWrapper.classList.remove("success");
+    inputWrapper.classList.add("error");
     initialPeople = 0;
   }
 
@@ -97,7 +101,7 @@ resetButton.addEventListener("click", function () {
   numberOfPerson.value = "";
   customTipValue.value = "";
 
-  tipButtons.forEach((button) => (button.checked = false));
+  tipValue.forEach((button) => (button.checked = false));
 
   tipAmount.textContent = "$0.00";
   totalAmount.textContent = "$0.00";
